@@ -1,0 +1,141 @@
+.courses {
+    padding: 21px 85px;
+    width: 100%;
+    height: auto;
+    background-color: #f5f6fa;
+}
+
+.search__row {
+    width: 100%;
+    display: flex;
+    max-width: 400px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.search {
+    display: inline-flex;
+    border-radius: 3px;
+	border: 1px solid #CED0DB;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	border-color: #ced0db;
+	border-width: 1px;
+	border-style: solid;
+	height: 36px;
+	width: 240px;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin: -2px 10px;
+    order: -1;
+  }
+  
+.search-field {
+    width: 300px;
+    border: 0; 
+  }
+  
+.search-field:focus {
+    outline: none;
+  }
+
+.btn__search {
+    border-radius: 3px;
+	background: #67A300;
+	height: 36px;
+	width: 73px;
+    outline: none;
+    color: #FFFFFF;
+	font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+	text-transform: none;
+	text-align: left;
+	font-weight: 600;
+    text-align: center;
+    border: transparent;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.add-course_row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.add-course__btn {
+    height: 36px;
+    width: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+	background: #009ECC;
+    border: transparent;
+    padding: 6px;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+.add-icon {
+    height: 16px;
+	width: 16px;
+}
+.add-btn__text {
+    line-height: 24px;
+	letter-spacing: -0.1px;
+	color: #FFFFFF;
+	font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+	text-transform: none;
+	text-align: left;
+	font-weight: 600;
+    margin-left: 4px;
+}
+.courses-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card {
+    border-radius: 6px;
+	background: #FFFFFF;
+	box-shadow: 0 1px 2px 0 rgba(29,30,38,0.10), 0 2px 10px 0 rgba(29,30,38,0.15);
+	width: 100%;
+    height: auto;
+    margin: 15px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 505px) {
+    .search__row {
+        max-width: 500px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .btn__search {
+        margin-top: 5px;
+
+    }
+    .add-course_row {
+        justify-content: center;
+    }
+    
+}
+
+
+@media (max-width: 850px) {
+    .courses {
+        padding: 21px 5px;
+    }
+    
+}

@@ -1,0 +1,28 @@
+<section class="login">
+    <div class="login__box">
+        <div class="login__wrapper">
+            <h3 class="login__title">Login</h3>
+            <div class="input__row">
+                <div class="input__label">
+                    <label for="email" class="login__label">Email</label>
+                    <p class="required">*required</p>
+                </div>
+                <input type="email" class="login__input" placeholder="Enter email"
+                #emailInput (input)="emailHandler(emailInput.value)">
+            </div>
+            <div class="input__row">
+                <div class="input__label">
+                    <label for="password" class="login__label">Password</label>
+                    <p class="required">*required</p>
+                </div>
+                <input type="password" class="login__input" placeholder="Enter password"
+                #passwordInput (input)="passwordHandler(passwordInput.value)">
+            </div>
+            <div class="login__footer">
+                <a href="#" class="login__link">Forgot your password?</a>
+                <button class="login__button" (click)="login(emailInput.value, passwordInput.value)"
+                routerLink="/courses">Login</button>
+            </div>
+        </div>
+    </div>
+</section>

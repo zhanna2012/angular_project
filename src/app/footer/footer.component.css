@@ -1,0 +1,22 @@
+.footer {
+	background: #303240;
+	height: 60px;
+	width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px 84px;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer p{
+	line-height: 24px;
+	letter-spacing: 0;
+	color: #FFFFFF;
+	font-size: 12px;
+    font-family: 'Source Sans Pro', sans-serif;
+	text-transform: none;
+	text-align: left;
+}

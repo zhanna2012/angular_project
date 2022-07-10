@@ -1,0 +1,40 @@
+<section class="courses">
+    <section class="search__row">
+        <div class="search">
+            <input type="text" class="search-field" placeholder="Type to search" 
+            #searchInput (input)="searchHandler(searchInput.value)">
+            <img src="assets/courses-assets/search.png" alt="search" class="search-icon">
+        </div>
+        <button class="btn__search" (click)="getSeacrhValue(searchInput.value)">
+            Search
+        </button>
+    </section>
+    <section class = "add-course_row">
+        <button class="add-course__btn" routerLink="/courses/new">
+            <img src="assets/courses-assets/add-btn.png" alt="add" class="add-icon">
+            <p class="add-btn__text"> Add course</p>
+        </button>
+    </section>
+    <section class="courses-box" *ngIf = "courses.length !== 0; else noCourses">
+        <app-course-card
+        *ngFor="let iterCourse of courses | orderBy: 'creationDate'| filter: searchInput.value; trackBy: trachById; let idx = index"
+         [course]="iterCourse"
+         [index]="idx+1"
+         (newItemEvent)="deleteCourse($event)"
+         ></app-course-card>
+         <div class="card">
+             <div class="card__wrapper">
+                 <a href="#" (click)="loadMore()">Load more</a>
+             </div>
+         </div>
+    </section>
+    <ng-template #noCourses>
+        <section class="courses-box">
+             <div class="card">
+                 <div class="card__wrapper">
+                     <p>No data, feel free to add new course!</p>
+                 </div>
+             </div>
+        </section>      
+    </ng-template>
+</section>

@@ -1,0 +1,65 @@
+<section class="add__course">
+    <div class="add__course_wrapper">
+        <h2 class="new__course">New course</h2>
+        <div class="course__title course__form-group">
+            <div class="input__label">
+                <label for="title" class="input__label-text">Title</label>
+                <p class="required">*required</p>
+            <input type="text" class="course__input course__input--title" placeholder="Enter title"
+            [value]="title"
+            #titleInput (input)="titleHandler(titleInput.value)">
+        </div>
+        </div>
+        <div class="course__description course__form-group">
+            <div class="input__label">
+                <label for="description" class="input__label-text">Description</label>
+                <p class="required">*required</p>
+            
+            <textarea [value]="description"
+            class="course__input course__input--description" placeholder="Enter description"
+            #descriptionInput (input)="descriptionHandler(descriptionInput.value)"></textarea>
+        </div>
+        </div>
+        <div class="course__duration course__form-group--small">
+            <div class="input__label">
+                <label for="duration" class="input__label-text">Duration</label>
+                <p class="required">*required</p>
+                <input type="number" class="course__input course__input--duration" 
+                [value]="duration"
+                placeholder="minutes"
+                #durationInput (input)="durationHandler(durationInput.value)">
+                <p class="duration__real">{{ this.duration| durationFormat}}</p>
+            </div>
+        </div>
+        <div class="course__date course__form-group--small">
+            <div class="input__label">
+                <label for="date" class="input__label-text">Date</label>
+                <p class="required">*required</p>
+            
+            <input [value]="date"
+            type="date" class="course__input course__input--duration" placeholder="MM/DD/YYYY"
+            #dateInput (input)="dateHandler(dateInput.value)">
+        </div>
+        </div>
+        <div class="course__author course__form-group--medium">
+            <div class="input__label">
+                <label for="author" class="input__label-text">Authors</label>
+                <p class="required">*required</p>
+            </div>
+            <div *ngIf = "authors.length !== 0">
+                <div *ngFor="let iterAuthor of authors" class="course__author-list">
+                    <p>{{iterAuthor}}</p>
+                    <div class="author__icon-wrapper"> 
+                        <img src="assets/form-assets/close.png" alt="close" class="author__icon">
+                    </div>
+                </div>
+            </div>
+            <input type="text" class="author__input course__input" placeholder="Enter author"
+            #authorInput (input)="authorHandler(authorInput.value)">
+        </div>
+        <div class="course__button-block">
+            <button class="course__button-item course__button-gray" (click)="cancelHandler()">Cancel</button>
+            <button class="course__button-item course__button-green" (click)="saveHandler()">Save</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,28 @@
+<header class="header">
+    <section class="header_row">
+        <app-logo></app-logo>
+        <div class="header__buttons" appIfAuth>
+            <div class="user__info">
+                <div class="header-icon__wrapper">
+                    <img src="assets/header-assets/user-icon.png" alt="user-icon" class="header-icon">
+                </div>
+                <p class="user__text">{{ this.userName }} login</p>
+            </div>
+            <button class="user__logout" (click)="logout()">
+                <div class="header-icon__wrapper">
+                <img src="assets/header-assets/logout-icon.png" alt="user-icon" class="header-icon">
+                </div>
+                <p class="user__text" routerLink="/login">Log out</p>
+            </button>
+        </div>
+    </section>
+      <section class="header_breadcrumbs" appIfAuth>
+        <p class="breadcrumbs__text"><span routerLink="/courses">Courses</span> 
+            <span>
+                {{routePath}}
+           </span>
+        </p>
+    </section> 
+</header>
+
+
